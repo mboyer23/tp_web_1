@@ -1,4 +1,5 @@
-package monprojet.dao;
+package monprojet.dao; 
+// dao = data access object
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import monprojet.entity.Country;
