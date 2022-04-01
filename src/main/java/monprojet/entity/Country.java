@@ -1,4 +1,6 @@
 package monprojet.entity;
+import java.util.*;
+
 import javax.persistence.*;
 
 import org.hibernate.annotations.Proxy;
@@ -22,4 +24,13 @@ public class Country {
     @Column(unique=true)
     @NonNull
     private String name;
+
+    // Dans la classe "Country.java"
+    @OneToMany(mappedBy="country")
+    // Essayer sans "mappedBy" pour voir le schémma relationnel généré
+    //@OneToMany
+
+    @ToString.Exclude // On ne veut pas inclure la liste des villes dans le toString
+    // Sinon récursivité infinie    
+    private List<City> cities = new ArrayList<>();
 }

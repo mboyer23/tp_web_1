@@ -29,4 +29,8 @@ public class City {
     @NonNull
     @ManyToOne(optional = false) // obligatoire, la clé étrangère ne doit pas être nulle
     private Country country;
+
+    public Object getCountry() {
+        return null;
+    }
 }
